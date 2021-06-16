@@ -3,3 +3,5 @@
 ################################################################################
 
 /InventoryServer/bin/Debug/netcoreapp3.1
+/InventoryServer/obj
+/.vs
