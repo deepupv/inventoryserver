@@ -1,0 +1,2 @@
+# inventoryserver
+gRPC Server
