@@ -10,10 +10,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["InventoryServer/InventoryServer.csproj", "InventoryServer/"]
-RUN dotnet restore "InventoryServer/InventoryServer.csproj"
+COPY ["InventoryServer.csproj", ""]
+RUN dotnet restore "InventoryServer.csproj"
 COPY . .
-WORKDIR "/src/InventoryServer"
+WORKDIR "/src/."
 RUN dotnet build "InventoryServer.csproj" -c Release -o /app/build
 
 FROM build AS publish
